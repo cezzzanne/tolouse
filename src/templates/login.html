@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>Hello</h1>
+{{ play }}
+{% for song in songs %}
+    {% for key, value in song.items %}
+        {% if key == "add" %}
+            <a href="add-song/{{ value }} ">+</a>
+        {% else %}
+        <p> {{ key }}: {{ value }}</p>
+        {% endif %}
+        {% endfor %}
+{% endfor %}
+</body>
+</html>
